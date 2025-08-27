@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punjab Spring Product — E-Card</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --accent: #0f5fa8;
+      --muted: #6b7280;
+      --steel: #e6eef6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: var(--bg);
+      margin: 0;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .ecard {
+      width: 750px;
+      max-width: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,252,255,1) 100%);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(13,38,76,0.08);
+      overflow: hidden;
+      border: 1px solid rgba(15,95,168,0.06);
+      display: flex;
+      gap: 0;
+    }
+    .left {
+      flex: 1.25;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .right {
+      width: 260px;
+      background: linear-gradient(135deg, var(--steel), #eef6fb);
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .logo .mark {
+      width: 68px;
+      height: 68px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #2b8bd6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 20px;
+      box-shadow: 0 6px 18px rgba(15,95,168,0.18);
+    }
+    .company {
+      font-size: 20px;
+      font-weight: 700;
+      color: #07203a;
+    }
+    .tag {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 13px;
+    }
+    .person { margin-top: 18px; }
+    .person .name {
+      font-weight: 700;
+      color: #0b2236;
+    }
+    .person .role {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .contacts {
+      display: flex;
+      gap: 18px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background: rgba(11,34,54,0.03);
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #0b2236;
+    }
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .spring-illustration {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .spring-svg {
+      width: 120px;
+      height: 80px;
+    }
+    .cta { margin-top: 12px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .qr {
+      width: 110px;
+      height: 110px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(11,34,54,0.06);
+      margin-bottom: 10px;
+    }
+    .foot {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 10px;
+      text-align: center;
+    }
+    @media (max-width: 720px) {
+      .ecard { flex-direction: column; }
+      .right { width: 100%; padding: 18px; }
+      .left { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <article class="ecard" role="article" aria-label="Punjab Spring Products e-card">
+    <section class="left">
+      <div>
+        <div class="logo">
+          <div class="mark">PS</div>
+          <div>
+            <div class="company">Punjab Spring Products</div>
+            <div class="tag">Professional and reliable performance</div>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="name">Mr. Jagmohan Singh</div>
+          <div class="role">Director</div>
+        </div>
+
+        <div class="contacts" aria-label="contact information">
+          <div class="contact-item">📞 <a href="tel:+919013227609">90132 27609</a></div>
+          <div class="contact-item">✉️ <a href="mailto:punjabspringproducts@gmail.com">punjabspringproducts@gmail.com</a></div>
+          <div class="contact-item">🌐 <a href="https://www.punjabspring.com" target="_blank" rel="noopener">www.punjabspring.com</a></div>
+          <div class="contact-item">🏢 Punjab, Amritsar</div>
+        </div>
+
+        <div class="spring-illustration">
+          <svg class="spring-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#0f5fa8" stop-opacity="0.95"/>
+                <stop offset="100%" stop-color="#2b8bd6" stop-opacity="0.95"/>
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 20 Q30 10 50 20 T90 20 T130 20 T170 20"/>
+              <path d="M10 40 Q30 30 50 40 T90 40 T130 40 T170 40"/>
+              <path d="M10 60 Q30 50 50 60 T90 60 T130 60 T170 60"/>
+              <path d="M10 80 Q30 70 50 80 T90 80 T130 80 T170 80"/>
+            </g>
+          </svg>
+
+          <div>
+            <div style="font-weight:700; color:#0b2236">Spare parts of corrugated box stitching machine</div>
+            <div class="muted"></div>
+            <div class="cta">
+              <a class="btn" href="catalog.html" target="_blank" rel="noopener">View Catalog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px; font-size:12px; color:var(--muted)">
+        made by Rajveer Singh .
+      </div>
+    </section>
+
+    <aside class="right" aria-label="qr and extras">
+      <!-- You can add a QR code or extra info here later -->
+    </aside>
+  </article>
+</body>
+</html>
